@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+
+#gambarHome {
+    background-image: url("../images/w2e_bg_image.jpg");
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+    color: white;
+}
+
+/* isi */
+div h1 {
+    color: white;
+}
+
+div ul {
+    border: 5px solid lightgrey;
+    padding: 3%;
+    background-color: lightgrey;
+}
+
+
+.profile {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+
+div ul li {
+    color: white;
+    list-style-type: none;
+    font-size: 12px;
+}
+
+nav {
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+ul.nav {
+    background-color: black;
+}
+
+li.nav {
+    display: inline-block;
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    background-color: grey;
+    padding: 20px;
+}
+
+footer {
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+}
