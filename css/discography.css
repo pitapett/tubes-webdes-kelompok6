@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+}
+
+#gambarHome {
+    background-image: url("../images/w2e_bg_image.jpg");
+    width: 100%;
+    padding-top:  20%;
+    padding-bottom: 20%;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+ul.nav {
+    background-color: black; 
+    position: relative;
+}
+
+li.nav {
+    display: inline-block;
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+}
+
+#discography {
+    position: relative;
+    display: inline-block;
+}
+
+#discography:hover #discography-dropdown-content {
+    display: block;
+}
+
+#discography-dropdown-content {
+    margin-top: 19px;
+    width: 147px;
+    background-color: black;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+#discography-dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    padding: 20px;
+}
+
+a:hover {
+    background-color: grey;
+}
+
+footer {
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+}
