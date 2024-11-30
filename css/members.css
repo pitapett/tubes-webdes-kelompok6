@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family: sans-serif;
 }
 
 #gambarHome {
@@ -10,6 +11,151 @@ body {
     text-align: center;
     color: white;
 }
+
+/* isi */
+
+div h1 {
+    color: white;
+    font-size: 40px;
+}
+
+
+
+.profile {
+    margin: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out, slideUp 5s infinite;
+    transform: translateX(-50%);
+}
+
+span {
+    color: E5E1DA;
+}
+
+div p {
+    color: white;
+    list-style-type: none;
+    font-size: 12px;
+    margin-left: 0px;
+    margin: 1;
+    padding: 1;
+}
+
+.kotak {
+    background-color: #222;
+    padding: 50px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 60%;
+    float: left;
+    /* width: 35%;
+    height: 48%; */
+}
+
+.kotak section p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* tambahin ini */
+.kotakFact {
+    width: 30%;
+    margin-left: 110%;
+    margin-bottom: 4%;
+    border: 2px solid #555;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    background-color: #222;
+    padding: 20px;
+}
+
+.rounded-button {
+    background-color: #557;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5%;
+    margin-top: 10%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    margin-top: 45%;
+    width: auto;
+    padding: 16px;
+    color: rgb(225, 254, 224);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: gray;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+
+}
+
+.prev:hover,
+.next:hover {
+    background-color: white;
+    color: #557;
+}
+
+/* responsive */
+@media screen and (max-width: 800px; ) {
+    .profile {
+        padding: 8px 50px 12px 50px;
+    }
+}
+
+/* sampai sini */
+
+.kotak .icon p {
+    font-size: 1.2rem;
+}
+
+.kotak h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+img {
+    width: 40%;
+    border: 2px solid darkgray;
+    box-shadow: 0px 0px 20px white;
+    padding: 10px;
+    margin: 18% 0 18% 10%;
+    float: right;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* sampai sini */
 
 nav {
     font-size: 15px;
@@ -37,7 +183,7 @@ a {
     transition: 0.3s ease;
 }
 
-a:hover {
+footer a:hover {
     background-color: grey;
     padding: 20px;
 }
@@ -48,12 +194,4 @@ footer {
     text-align: center;
     font-family: sans-serif;
     padding: 20px;
-}
-
-.kotak {
-    background-color: gray;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px white;
-    margin-bottom: 20px;
 }
