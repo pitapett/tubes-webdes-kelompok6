@@ -4,8 +4,11 @@ body {
 
 #gambarHome {
     background-image: url("../images/w2e_bg_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
     width: 100%;
-    padding-top:  20%;
+    padding-top:  25%;
     padding-bottom: 20%;
     text-align: center;
     color: white;
@@ -70,6 +73,28 @@ a {
 
 a:hover {
     background-color: grey;
+}
+
+section {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+#seperator{
+    height: 2px;
+    background-color: white;
+    margin: auto;
+    width: 80%;
+}
+
+#singles {
+    background-color: rgb(70, 70, 70);
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 footer {
