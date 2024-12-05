@@ -1,17 +1,28 @@
 body {
     background-color: black;
+    margin: 0;
+}
+
+#header {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: none;
+    padding: none;
 }
 
 #gambarHome {
-    background-image: url("../images/w2e_bg_image.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
     width: 100%;
-    padding-top:  25%;
-    padding-bottom: 20%;
-    text-align: center;
-    color: white;
+    height: 50vh;
+    object-fit: cover;
+}
+
+#textOverImage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav {
