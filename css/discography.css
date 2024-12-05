@@ -14,7 +14,7 @@ body {
 
 #gambarHome {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     object-fit: cover;
 }
 
@@ -92,20 +92,56 @@ section {
     width: 100%;
 }
 
-#seperator{
+.releaseTitle{
+    font-size:larger;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.releaseDate{
+    color: rgb(180, 180, 180);
+    font-size: small;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.seperator{
     height: 2px;
-    background-color: white;
+    background-color: rgb(104, 104, 104);
     margin: auto;
     width: 80%;
 }
 
 #singles {
-    background-color: rgb(70, 70, 70);
+    background-color: rgba(168, 168, 168, 0.218);
     width: 70%;
+    padding: 30px 20px;
     margin: auto;
     border-radius: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    overflow: auto;
+}
+
+#singles img{
+    width: 150px;
+    margin: 5px;
+}
+
+#singles .single{
+    width: fit-content;
+    text-align: left;
+    background-color: black;
+    padding: 10px;
+    float: left;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.daisy{
+    clear: both;
 }
 
 footer {
