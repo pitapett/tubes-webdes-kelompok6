@@ -12,10 +12,15 @@ body {
     padding: none;
 }
 
+#header h1{
+    font-size: 2.5rem;
+}
+
 #gambarHome {
     width: 100%;
     height: 60vh;
     object-fit: cover;
+    z-index: -1;
 }
 
 #textOverImage{
@@ -23,6 +28,30 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#stickyHeader {
+    width: 100%;
+    height: 10vh;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 1;
+    animation-name: sticky-header-fadein;
+    animation-timeline: scroll();
+}
+#stickyHeader h1{
+    font-size: 2.5rem;
+    margin-top: 15px;
+}
+
+@keyframes sticky-header-fadein {
+    0%{opacity: 0;}
+    35%{opacity: 0;}
+    80%{opacity: 1;}
 }
 
 nav {
