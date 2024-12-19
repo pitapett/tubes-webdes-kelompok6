@@ -43,6 +43,7 @@ body {
     animation-name: sticky-header-fadein;
     animation-timeline: scroll();
 }
+
 #stickyHeader h1{
     font-size: 2.5rem;
     margin-top: 15px;
@@ -51,7 +52,7 @@ body {
 @keyframes sticky-header-fadein {
     0%{opacity: 0;}
     35%{opacity: 0;}
-    80%{opacity: 1;}
+    60%{opacity: 1;}
 }
 
 nav {
@@ -143,7 +144,7 @@ section {
     width: 80%;
 }
 
-#singles {
+.card.singles {
     background-color: rgba(168, 168, 168, 0.218);
     width: 70%;
     padding: 30px 20px;
@@ -151,12 +152,17 @@ section {
     border-radius: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    overflow: auto;
 }
 
-#singles img{
+.card img{
     width: 150px;
     margin: 5px;
+}
+
+#singles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #singles .single{
@@ -169,9 +175,6 @@ section {
     border-radius: 5px;
 }
 
-.daisy{
-    clear: both;
-}
 
 footer {
     background-color: darkgray;
