@@ -144,11 +144,13 @@ section {
     width: 80%;
 }
 
-.card.singles {
+.card {
     background-color: rgba(168, 168, 168, 0.218);
     width: 70%;
     padding: 30px 20px;
-    margin: auto;
+    margin-inline: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
     border-radius: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -159,15 +161,16 @@ section {
     margin: 5px;
 }
 
-#singles {
+#singles, #eps, #albums {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#singles .single{
-    width: fit-content;
+.single, .ep, .album{
+    width: 160px;
     text-align: left;
+    overflow-wrap: normal;
     background-color: black;
     padding: 10px;
     float: left;
