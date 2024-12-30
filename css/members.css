@@ -1,7 +1,8 @@
 body {
     background-color: black;
+    margin: 0;
     font-family: sans-serif;
-    overflow-x: hidden;
+    color: white;
 }
 
 #gambarHome {
@@ -10,209 +11,7 @@ body {
     padding-top: 20%;
     padding-bottom: 20%;
     text-align: center;
-    color: white;
 }
-
-/* isi */
-
-div h1 {
-    color: white;
-    font-size: 40px;
-}
-
-
-
-.profile {
-    margin: center;
-    color: white;
-    animation: 5s ease-in-out, slideUp 5s infinite;
-    transform: translateX(-50%);
-}
-
-span {
-    color: E5E1DA;
-}
-
-div p {
-    color: white;
-    list-style-type: none;
-    font-size: 12px;
-    margin-left: 0px;
-    margin: 1;
-    padding: 1;
-}
-
-.kotak {
-    background-color: #222;
-    padding-bottom: 5%;
-    padding: 5%;
-    border-radius: 10px;
-    border: 2px solid #555;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    margin-top: 3%;
-    text-align: left;
-    margin-left: 55%;
-    float: left;
-    width: 35%;
-    height: 58%;
-    font-size: 40px;
-}
-
-
-.kotak section p {
-    margin: 1% 0;
-    text-align: center;
-}
-
-/* tambahin ini */
-/* Responsive */
-
-/* sampai sini */
-/* kotak Fakta */
-.kotakFact {
-    width: 30%;
-    height: 25%;
-    margin-left: 105%;
-    margin-bottom: 4%;
-    border: 2px solid #555;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    background-color: #222;
-    padding: 3%;
-    font-size: 36%;
-}
-
-.kotakFact li {
-    font-size: 100%;
-    margin-left: 0;
-}
-
-/* button instagram*/
-.rounded-button {
-    background-color: #557;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5%;
-    margin-top: 10%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    margin-top: 45%;
-    width: auto;
-    padding: 16px;
-    color: rgb(225, 254, 224);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: gray;
-}
-
-
-
-
-/* responsive */
-@media screen and (max-width: 800px) {
-    .profile {
-        padding: 8px 50px 12px 50px;
-    }
-}
-
-/* sampai sini */
-/* nambahin ini di 05/12/24 */
-.slider-container {
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    margin-left: 2%;
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    /* Animasi geser */
-}
-
-.slide {
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: white;
-}
-
-.button-container {
-    position: absolute;
-    top: 50%;
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: 1px solid silver;
-    padding: 1%x;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.button:disabled {
-    background-color: rgba(0, 0, 0, 0.3);
-    cursor: not-allowed;
-}
-
-.button:hover {
-    background-color: white;
-    color: #557;
-}
-
-/* sampai sini */
-
-.kotak .icon p {
-    font-size: 1.2rem;
-}
-
-.kotak h3 {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-
-img {
-    border: 2% solid darkgray;
-    box-shadow: 0px 0px 10px white;
-    padding: 2%;
-    margin: 18% 0 18% 10%;
-    float: right;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-/* sampai sini */
 
 nav {
     font-size: 15px;
@@ -237,12 +36,147 @@ li.nav {
 a {
     text-decoration: none;
     color: white;
+}
+
+li>a {
     transition: 0.3s ease;
 }
 
-footer a:hover {
+li>a:hover {
     background-color: grey;
     padding: 20px;
+}
+
+/* ngaturin wrappernya dulu */
+.slider-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    /* fleksibel kontainer dgn bbrp elemn*/
+    flex-direction: column;
+    /* biar responsif*/
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* jadi ceritanya semua slide disembunyiin */
+
+}
+
+.slide.active {
+    display: block;
+    /* jadi siapa yang aktif, yang lagi diklik user bakal dimunculin */
+}
+
+
+/* mulai ke section ya */
+.slide>section {
+    border: 2px solid #555;
+    border-radius: 15px;
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    width: 60%;
+    display: flex;
+    float: left;
+    gap: 20px;
+    margin-top: 18px;
+}
+
+.kotak-info {
+    width: 50%;
+    padding: 20px;
+}
+
+.kotak-info>p {
+    font-size: smaller;
+}
+
+.kotak-info>h3 {
+    font-size: 35px;
+}
+
+.kotak-info>h3:hover {
+    background: linear-gradient(120deg, #91AC8F, #B2C9AD, #8EB486);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kotak-info>p:hover {
+    color: #91AC8F;
+}
+
+.kotak-foto {
+    width: 50%;
+    margin: auto;
+}
+
+.kotak-foto img {
+    width: 75%;
+    background-color: #222;
+    border: 5px solid #222;
+    box-shadow: 0px 0px 10px white;
+    object-fit: cover;
+}
+
+/* button */
+.rounded-button {
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    background-color: #557;
+    color: white;
+}
+
+.rounded-button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* aside */
+.slide>aside {
+    width: 30%;
+    float: right;
+}
+
+
+
+.fact {
+    border: 2px solid #555;
+    border-radius: 15px;
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+
+/* prev dan next */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
 
 footer {
@@ -252,5 +186,3 @@ footer {
     font-family: sans-serif;
     padding: 20px;
 }
-
-/* responsive */
