@@ -1,28 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0; // Slide saat ini
-    const slider = document.getElementById("slider");
-    const totalSlides = document.querySelectorAll(".slide").length;
+    const slides = document.querySelectorAll('.slide');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let currentSlide = 0;
 
-    function updateSlider() {
-        const offset = currentIndex * -100; // Menghitung posisi geser
-        slider.style.transform = `translateX(${offset}vw)`;
+    slides[0].classList.add('active');
 
-        // Update tombol prev/next
-        document.getElementById("prevButton").disabled = currentIndex === 0;
-        document.getElementById("nextButton").disabled = currentIndex === totalSlides - 1;
-    }
-
-    document.getElementById("nextButton").addEventListener("click", function () {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-            updateSlider();
+    prev.addEventListener('click', () => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        if (currentSlide === 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide--;
         }
+        slides[currentSlide].classList.add('active');
     });
 
-    document.getElementById("prevButton").addEventListener("click", function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
+    next.addEventListener('click', () => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        if (currentSlide === slides.length - 1) {
+            currentSlide = 0;
+        } else {
+            currentSlide++;
         }
+        slides[currentSlide].classList.add('active');
     });
 });
