@@ -1,4 +1,4 @@
-body {
+ body {
     background-color: black;
     margin: 0;
 }
@@ -116,6 +116,58 @@ a:hover {
     background-color: grey;
 }
 
+dialog{
+    border: none !important;
+    background-color: rgb(205, 205, 205);
+    box-shadow: 0 0 20px 5px black;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.modal-content{
+    z-index: 100;
+    padding: 0px 10px;
+    width: 600px;
+    background-color: rgb(205, 205, 205);
+    color: black;
+    float: left;
+}
+
+.modal-text{
+    overflow: auto;
+}
+
+.modals-picture{
+    width: 250px;
+    margin: 0px auto;
+    box-shadow: 5px 5px 5px 1px rgb(96, 96, 96);
+}
+
+dialog::backdrop{
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.streaming-platform{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.streaming-platform a{
+    all: unset;
+}
+
+.streaming-platform img {
+    padding-top: 5px;
+    width: 40px;
+}
+
+.streaming-platform img:hover{
+    scale: 1.08;
+    cursor: pointer;
+}
+
 section {
     color: white;
     text-align: center;
@@ -193,7 +245,7 @@ section {
     transition: scale 150ms ease-out;
 }
 .single:hover, .ep:hover, .album:hover{
-    scale: 1.15;
+    scale: 1.1;
     cursor: pointer;
 }
 
