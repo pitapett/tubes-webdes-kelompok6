@@ -43,6 +43,83 @@ a:hover {
     scale: 1.1;
 }
 
+main{
+    color: white;
+}
+
+#about{
+    text-align: center;
+    background-color: aqua; 
+    max-width: 100%;
+}
+
+#about div {
+    background-color: black;
+}
+
+#top-right img {
+    width: 100%;
+}
+
+.top-content{
+    width: 50%;
+}
+
+#top-left{
+    background-color: green;
+}
+
+#top-right{
+    background-color: yellow;
+}
+
+#top{
+    display: flex;
+    height: 64.7%;
+}
+
+#center{
+    height: 64.7%;
+    display: flex;
+}
+
+#center-left{
+    background-color: chocolate;
+    width: 25%;
+}
+
+#center-center{
+    background-color: #F7F7F7 !important;
+    width: 50%;
+    color: black;
+}
+
+#center-right{
+    background-color: blanchedalmond;
+    width: 25%;
+}
+
+#bottom {
+    height: 64.75%;
+    display: flex;
+}
+
+.bottom-content{
+    width: 50%;
+}
+
+#bottom-left {
+    background-color: beige;
+}
+
+#bottom-left img {
+    width: 100%;
+}
+
+#bottom-right {
+    background-color: blueviolet;
+}
+
 footer {
     background-color: darkgray;
     color: white;
