@@ -5,7 +5,7 @@ body {
 #gambarHome {
     background-image: url("../images/w2e_bg_image.jpg");
     width: 100%;
-    padding-top:  20%;
+    padding-top: 20%;
     padding-bottom: 20%;
     text-align: center;
     color: white;
@@ -18,7 +18,7 @@ nav {
 }
 
 ul.nav {
-    background-color: black; 
+    background-color: black;
 }
 
 li.nav {
