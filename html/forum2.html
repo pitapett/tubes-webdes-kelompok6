@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Forum 2</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/forum2.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="gambarHome">
+        <h1>Wave to Earth</h1>
+    </div>
+
+    <nav>
+        <ul class="nav">
+            <li class="nav"><a href="home.html">HOME</a></li>
+            <li class="nav"><a href="members.html">MEMBERS</a></li>
+            <li class="nav"><a href="discography.html">DISCOGRAPHY</a></li>
+            <li class="nav"><a href="forum.html">FORUM</a></li>
+            <li class="nav"><a href="updates.html">UPDATES</a></li>
+        </ul>
+    </nav>
+
+    <div id="isi">
+
+        <div class="judul">
+            <h2>Let's Connect with Others!</h2>
+        </div>
+
+        <div class="form">
+
+            <form id="form" action="">
+
+                <h3>Sign Up</h3>
+
+                <div class="input-box">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" placeholder="Input your full name!" required />
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Drop your name@gmail.com!" required />
+                </div>
+
+                <div class="input-box">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" placeholder="Input your number!" required />
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Don't tell anyone!" required />
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Sign Up" name="submit" id="submit" onclick="popupOpen()">
+                </div>
+
+                <div class="popup" id="popup">
+                    <h2>Congratulations!</h2>
+                    <h4>You have successfully signed up</h4>
+                    <p><a class="forum3" href="forum3.html">Click here to start</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Copyright 2024 </p>
+        <p>This website was created by <a href="authors.html">Authors</a></p>
+        <p>Click here to see our <a href="references.html">References</a></p>
+        <p><a href="https://www.instagram.com/wave_to_earth/profilecard/?igsh=MXJ1N3Z3MWhzZzUwdg==">Instagram</a> |
+            <a href="https://youtube.com/@wavetoearth?si=JQhUo71J6aTkDCLk">Youtube</a> | <a
+                href="https://vm.tiktok.com/ZSjUesE9N/">Tiktok</a> | <a href="https://wavetoearthmerchs.com/">Official
+                Merchandise</a>
+        </p>
+    </footer>
+
+
+    <script>
+        function popupOpen() {
+            popup.classList.add("open-popup");
+            document.getElementById("form").reset();
+        }
+        function popupRemove() {
+        popup.classList.remove("open-popup");
+      }
+    </script>
+
+</body>
+
+</html>
