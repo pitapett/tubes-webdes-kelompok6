@@ -185,7 +185,7 @@ li>a:hover {
 .prev,
 .next {
     position: absolute;
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%);
     cursor: pointer;
     background-color: white;
