@@ -1,0 +1,259 @@
+ body {
+    background-color: black;
+    margin: 0;
+}
+
+#header {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: none;
+    padding: none;
+}
+
+#header h1{
+    font-size: 2.5rem;
+}
+
+#gambarHome {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#textOverImage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#stickyHeader {
+    width: 100%;
+    height: 10vh;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 1;
+    animation-name: sticky-header-fadein;
+    animation-timeline: scroll();
+}
+
+#stickyHeader h1{
+    font-size: 2.5rem;
+    margin-top: 15px;
+}
+
+@keyframes sticky-header-fadein {
+    0%{opacity: 0;}
+    35%{opacity: 0;}
+    60%{opacity: 1;}
+}
+
+nav {
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+ul.nav {
+    background-color: black; 
+    position: relative;
+}
+
+li.nav {
+    display: inline-block;
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+}
+
+#discography {
+    position: relative;
+    display: inline-block;
+}
+
+#discography:hover #discography-dropdown-content {
+    display: block;
+}
+
+#discography-dropdown-content {
+    margin-top: 19px;
+    width: 147px;
+    background-color: black;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+#discography-dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    padding: 20px;
+}
+
+a:hover {
+    background-color: grey;
+}
+
+dialog{
+    border: none !important;
+    background-color: rgb(205, 205, 205);
+    box-shadow: 0 0 20px 5px black;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.modal-content{
+    z-index: 100;
+    padding: 0px 10px;
+    width: 600px;
+    background-color: rgb(205, 205, 205);
+    color: black;
+    float: left;
+}
+
+.modal-text{
+    overflow: auto;
+}
+
+.modals-picture{
+    width: 250px;
+    margin: 0px auto;
+    box-shadow: 5px 5px 5px 1px rgb(96, 96, 96);
+}
+
+dialog::backdrop{
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.streaming-platform{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.streaming-platform a{
+    all: unset;
+}
+
+.streaming-platform img {
+    padding-top: 5px;
+    width: 40px;
+}
+
+.streaming-platform img:hover{
+    scale: 1.08;
+    cursor: pointer;
+}
+
+section {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.releaseTitle{
+    font-size:larger;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.releaseDate{
+    color: rgb(180, 180, 180);
+    font-size: small;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.seperator{
+    height: 2px;
+    background-color: rgb(104, 104, 104);
+    margin: auto;
+    width: 80%;
+}
+
+
+.card_content {
+    background-color: rgb(35, 35, 35);
+    width: 70%;
+    padding: 30px 20px;
+    margin-inline: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.card img{
+    width: 150px;
+    margin: 5px;
+}
+
+.card{
+    animation: fade-in, linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 600px;
+}
+
+@keyframes fade-in{
+    from{scale: 0.7; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+
+#singles, #eps, #albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.single, .ep, .album{
+    width: 160px;
+    text-align: left;
+    overflow-wrap: normal;
+    background-color: black;
+    padding: 10px;
+    float: left;
+    margin: 20px;
+    border-radius: 5px;
+    transition: scale 150ms ease-out;
+}
+.single:hover, .ep:hover, .album:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+}
