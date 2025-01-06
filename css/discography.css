@@ -1,133 +1,14 @@
- body {
-    background-color: black;
-    margin: 0;
-}
-
-#header {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    color: white;
-    margin: none;
-    padding: none;
-}
-
-#header h1{
-    font-size: 2.5rem;
-}
-
-#gambarHome {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    z-index: -1;
-}
-
-#textOverImage{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#stickyHeader {
-    width: 100%;
-    height: 10vh;
-    color: white;
-    padding: 5px 0;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    background-color: black;
-    z-index: 1;
-    animation-name: sticky-header-fadein;
-    animation-timeline: scroll();
-}
-
-#stickyHeader h1{
-    font-size: 2.5rem;
-    margin-top: 15px;
-}
-
-@keyframes sticky-header-fadein {
-    0%{opacity: 0;}
-    35%{opacity: 0;}
-    60%{opacity: 1;}
-}
-
-nav {
-    font-size: 15px;
-    text-align: center;
-    list-style: none;
-}
-
-ul.nav {
-    background-color: black; 
-    position: relative;
-}
-
-li.nav {
-    display: inline-block;
-    list-style: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 5px;
-    cursor: pointer;
-}
-
-nav ul ul {
-    display: none;
-    position: absolute;
-}
-
-#discography {
-    position: relative;
-    display: inline-block;
-}
-
-#discography:hover #discography-dropdown-content {
-    display: block;
-}
-
-#discography-dropdown-content {
-    margin-top: 19px;
-    width: 147px;
-    background-color: black;
-    position: absolute;
-    display: none;
-    z-index: 1;
-}
-
-#discography-dropdown-content a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s ease;
-    padding: 20px;
-}
-
-a:hover {
-    background-color: grey;
-}
-
 dialog{
     border: none !important;
     background-color: rgb(205, 205, 205);
     box-shadow: 0 0 20px 5px black;
-    width: fit-content;
+    width: 50%;
     border-radius: 10px;
 }
 
 .modal-content{
     z-index: 100;
     padding: 0px 10px;
-    width: 600px;
     background-color: rgb(205, 205, 205);
     color: black;
     float: left;
@@ -138,7 +19,7 @@ dialog{
 }
 
 .modals-picture{
-    width: 250px;
+    width: 30%;
     margin: 0px auto;
     box-shadow: 5px 5px 5px 1px rgb(96, 96, 96);
 }
@@ -168,7 +49,7 @@ dialog::backdrop{
     cursor: pointer;
 }
 
-section {
+main {
     color: white;
     text-align: center;
     width: 100%;
@@ -211,8 +92,10 @@ section {
 
 
 .card img{
-    width: 150px;
-    margin: 5px;
+    width: 90%;
+    margin-inline: auto;
+    display: block;
+    margin-top: 5px;
 }
 
 .card{
@@ -234,7 +117,7 @@ section {
 }
 
 .single, .ep, .album{
-    width: 160px;
+    width: 15%;
     text-align: left;
     overflow-wrap: normal;
     background-color: black;
@@ -244,16 +127,9 @@ section {
     border-radius: 5px;
     transition: scale 150ms ease-out;
 }
+
 .single:hover, .ep:hover, .album:hover{
     scale: 1.1;
     cursor: pointer;
 }
 
-
-footer {
-    background-color: darkgray;
-    color: white;
-    text-align: center;
-    font-family: sans-serif;
-    padding: 20px;
-}

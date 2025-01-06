@@ -7,6 +7,10 @@
     <title>Forum 3</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/forum3.css">
+    <link rel="stylesheet" href="../css/responsive-navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="/shared/third_party/popover/popover.iife.min.js" type="module"></script>
     <script src="/shared/third_party/polyfill/scroll-timeline.js"></script>
     <script type="module">
@@ -38,6 +42,33 @@
                 });
             });
         }
+
+        const slider = document.querySelector(".cards");
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener("pointerdown", (e) => {
+            isDown = true;
+            slider.classList.add("active");
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener("pointerleave", () => {
+            isDown = false;
+            slider.classList.remove("active");
+        });
+        slider.addEventListener("pointerup", () => {
+            isDown = false;
+            slider.classList.remove("active");
+        });
+        slider.addEventListener("pointermove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
     </script>
     <style>
         @layer demo.base, demo.components;
@@ -85,20 +116,35 @@
 </head>
 
 <body>
+    <div id="header">
+        <img src="../images/w2e_bg_image.jpg" id="gambarHome">
+        <div id="textOverImage">
+            <h1>Wave to Earth</h1>
+        </div>
 
-    <div id="gambarHome">
+    </div>
+
+    <div id="stickyHeader">
         <h1>Wave to Earth</h1>
     </div>
 
     <nav>
-        <ul class="nav">
-            <li class="nav"><a href="home.html">HOME</a></li>
-            <li class="nav"><a href="members.html">MEMBERS</a></li>
-            <li class="nav"><a href="discography.html">DISCOGRAPHY</a></li>
-            <li class="nav"><a href="../html/forum1.html">FORUM</a></li>
-            <li class="nav"><a href="updates.html">UPDATES</a></li>
+        <ul>
+            <li ><a href="../html/home.html">HOME</a></li>
+            <li ><a href="../html/members.html">MEMBERS</a></li>
+            <li id="discography"><a href="../html/discography.html">DISCOGRAPHY</a>
+                <div id="discography-dropdown-content">
+                    <a href="../html/discography.html#card_1">Singles</a>
+                    <a href="../html/discography.html#card_2">EPs</a>
+                    <a href="../html/discography.html#card_3">Albums</a>
+                </div>
+            </li>
+            <li><a href="../html/forum1.html">FORUM</a></li>
+            <li><a href="updates.html">UPDATES</a></li>
         </ul>
     </nav>
+
+    
 
 
     <div id="isi">
@@ -294,58 +340,59 @@
     <div id="isi2">
         <div class="judul2">
             <h2>Let's see what they said!</h2>
-            <h3>zzz</h3>
+            <h3>It's all about Wave to Earth</h3>
         </div>
     </div>
 
     <div class="view">
         <div class="block">
-            <p>hello w2e!</p>
+            <p>우리 다시 만날 수 있을까요?</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>I wish I stanned them way earlier</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>힘의 원천은 뭐예요?</p>
+        </div>
+
+        <div class="block">
+            <p>Any recommended W2E's songs?</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>신나는 노래 추천해줘요!</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>Wish I could attend the concert...</p>
+        </div>
+
+        <div class="block">
+            <p>요즘 제일 좋아하는 노래는 뭐예요</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>Keep up the good work</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>목소리가 참 좋다 :D</p>
+        </div>
+
+        <div class="block">
+            <p>W2E is just PERFECT!</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
+            <p>항상 응원할게요</p>
         </div>
         <div class="block">
-            <p>hello w2e!</p>
-        </div>
-        <div class="block">
-            <p>hello w2e!</p>
-        </div>
-        <div class="block">
-            <p>hello w2e!</p>
-        </div>
-        <div class="block">
-            <p>hello w2e!</p>
+            <p>Your fav W2E's song lately?</p>
         </div>
     </div>
 
     <footer>
         <p>&copy; Copyright 2024 </p>
         <p>This website was created by <a href="authors.html">Authors</a></p>
-        <p>Click here to see our <a href="references.html">References</a></p>
-        <p><a href="https://www.instagram.com/wave_to_earth/profilecard/?igsh=MXJ1N3Z3MWhzZzUwdg==">Instagram</a> |
-            <a href="https://youtube.com/@wavetoearth?si=JQhUo71J6aTkDCLk">Youtube</a> | <a
+        <p><a href="https://www.instagram.com/wave_to_earth/profilecard/?igsh=MXJ1N3Z3MWhzZzUwdg==">Instagram</a> | <a
+                href="https://youtube.com/@wavetoearth?si=JQhUo71J6aTkDCLk">Youtube</a> | <a
                 href="https://vm.tiktok.com/ZSjUesE9N/">Tiktok</a> | <a href="https://wavetoearthmerchs.com/">Official
-                Merchandise</a>
-        </p>
+                Merchandise</a></p>
     </footer>
 
     <script defer=""
