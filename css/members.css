@@ -1,4 +1,5 @@
-body{
+/* yemima yang kerjain */
+body {
     font-family: 'Playfair Display';
 }
 
@@ -116,25 +117,28 @@ li>a:hover {
     object-fit: cover;
 }
 
-
+/* jadi sebelumnya video itu disemunyiin dulu */
 .video {
     /* position: absolute; */
     width: 75%;
-    height: 40%;
+    height: 20%;
     object-fit: cover;
     display: none;
     opacity: 0;
     transition: visibility 0.3s, opacity 0.3s;
 }
 
+/* ketika diklik baru dibuka */
 .kotak-foto:hover .video {
     display: block;
     opacity: 2;
     z-index: 10;
     cursor: pointer;
-    border: 5px solid white;
+    border: 5px solid #222;
+    box-shadow: 0px 0px 10px white;
 }
 
+/* ketika foto diklik maka dia menghilang */
 .kotak-foto:hover img {
     display: none;
 }
