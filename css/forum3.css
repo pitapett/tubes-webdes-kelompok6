@@ -261,6 +261,10 @@ h3 {
     }
 }
 
+#cards {
+    overflow: hidden;
+}
+
 .form {
     background: linear-gradient(#D7D3BF, #ECEBDE, #C1BAA1);
     padding: 20px;
