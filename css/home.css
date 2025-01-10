@@ -38,7 +38,7 @@
 }
 
 body {
-    background-color: #303030;
+    background-color: #202020;
     margin: 0;
     timeline-scope: --revealStickyHeader;
     font-family: 'Playfair Display';
@@ -116,7 +116,7 @@ main {
     text-align: center;
     position: fixed;
     top: 0;
-    background-color: #303030;
+    background-color: #202020;
     z-index: 100;
     animation: sticky-header-fadein linear;
     animation-timeline: --revealStickyHeader;
@@ -137,7 +137,7 @@ nav {
 }
 
 nav ul {
-    background-color: #303030;
+    background-color: #202020;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -164,7 +164,7 @@ nav ul ul {
 
 #discography-dropdown-content {
     width: 147px;
-    background-color: #303030;
+    background-color: #202020;
     position: absolute;
     display: none;
     z-index: 2;

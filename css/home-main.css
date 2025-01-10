@@ -20,7 +20,7 @@ main a {
 }
 
 #top-left {
-    background-color: #303030;
+    background-color: #202020;
     display: flex;
     overflow: hidden;
 }
@@ -28,7 +28,7 @@ main a {
 #members-text {
     width: 55%;
     position: relative;
-    background-color: #303030;
+    background-color: #202020;
     padding: 0;
     transition: width 0.8s;
 }
@@ -105,7 +105,7 @@ main a {
 }
 
 #top-right {
-    background-color: #303030;
+    background-color: #202020;
     background-image: url(../images/wave-to-earth-about-image-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,10 +122,10 @@ main a {
 }
 
 #center-left {
-    background-color: #303030;
+    background-color: #202020;
     width: 25%;
     color: #D9D9D9;
-    background-image: linear-gradient(to right, #303030, #303030 , #D9D9D9,#D9D9D9);
+    background-image: linear-gradient(to right, #202020, #202020 , #D9D9D9,#D9D9D9);
 }
 
 
@@ -133,7 +133,7 @@ main a {
 #center-center {
     overflow: hidden;
     background-color: #D9D9D9 !important;
-    color: #303030;
+    color: #202020;
     width: 50%;
 }
 
@@ -161,7 +161,7 @@ main a {
 
 #center-right {
     width: 25%;
-    background-image: linear-gradient(to right,#D9D9D9,#D9D9D9, #303030,#303030);
+    background-image: linear-gradient(to right,#D9D9D9,#D9D9D9, #202020,#202020);
 }
 
 
@@ -178,7 +178,7 @@ main a {
 }
 
 #bottom-left {
-    background-color: #303030;
+    background-color: #202020;
     background-image: url(../images/wave-to-earth-about-image-2-edited.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,7 +233,7 @@ main a {
         #cards {
             margin: 0;
             padding: 0;
-            background-color: #303030;
+            background-color: #202020;
         }
 
         .cards {

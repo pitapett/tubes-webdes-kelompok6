@@ -5,7 +5,7 @@ main {
 }
 
 .card_content {
-    background-color: rgb(35, 35, 35);
+    background-color: #1b1b1b;
     width: 70%;
     padding: 30px 20px;
     margin-inline: auto;
