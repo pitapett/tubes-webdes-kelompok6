@@ -95,7 +95,7 @@ openAlbumPlayWithEarthModal.addEventListener('click', function () {
 });
 
 
-
+// script buat close modal onclick outside modal's dimension
 const modals = document.querySelectorAll('.modal');
 modals.forEach((modal) => {
     modal.addEventListener("click", e => {

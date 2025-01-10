@@ -1,3 +1,5 @@
+
+/* responsive css */
 @media only screen and (max-width: 750px){
     #bottom-left {
         display: none;
@@ -36,6 +38,7 @@
         width: 100%;
     }
 }
+
 
 body {
     background-color: #202020;
@@ -78,6 +81,8 @@ main {
     transform: translate(-50%, -50%);
 }
 
+/* animasi untuk sticky header fadein ketika header sudah diluar viewport */
+
 @keyframes sticky-header-fadein {
     0% {
         opacity: 0;
@@ -91,6 +96,8 @@ main {
         opacity: 1;
     }
 }
+
+/* animasi untuk memberi space di main ketika sticky header fadein*/
 
 @keyframes space-for-sticky-header{
     0% {
