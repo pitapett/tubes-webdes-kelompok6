@@ -117,10 +117,11 @@ main {
 }
 
 .single, .ep, .album{
+    font-size: smaller;
     width: 15%;
     text-align: left;
     overflow-wrap: normal;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(17, 17, 17);
     padding: 10px;
     float: left;
     margin: 20px;

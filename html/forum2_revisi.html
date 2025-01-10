@@ -43,76 +43,93 @@
                     <a href="../html/discography.html#card_3">Albums</a>
                 </div>
             </li>
-            <li><a href="../html/forum1.html">FORUM</a></li>
+            <li><a href="../html/forum1_revisi.html">FORUM</a></li>
             <li><a href="updates.html">UPDATES</a></li>
         </ul>
     </nav>
 
-    <div id="isi">
+    <main>
+        <div id="isi">
 
-        <div class="judul">
-            <h2>Let's Connect with Others!</h2>
-        </div>
+            <div class="judul">
+                <h2>Let's Connect with Others!</h2>
+            </div>
 
-        <div class="form-wrapper">
+            <div class="form-wrapper">
 
-            <p id="error-message"></p>
-            <!-- kalo ada yg belom keisi, nanti validasinya muncul di sini -->
+                <p id="error-message"></p>
+                <!-- kalo ada yg belom keisi, nanti validasinya muncul di sini -->
 
-            <form id="form" action="">
+                <form id="form" action="">
 
-                <h3>Sign Up</h3>
+                    <h3>Sign Up</h3>
 
-                <div>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" name="fullname" id="fullname-input" placeholder="Input your full name!" required>
-                </div>
+                    <div>
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" id="fullname-input" placeholder="Input your full name!"
+                            required>
+                    </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email-input" placeholder="Input your e-mail!" required>
-                </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email-input" placeholder="Input your e-mail!" required>
+                    </div>
 
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password-input" placeholder="Input your password!"
-                        required>
-                </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password-input" placeholder="Input your password!"
+                            required>
+                    </div>
 
-                <button type="submit" class="btn" onclick="openPopup()">Sign Up</button>
+                    <button type="submit" class="btn" onclick="openPopup()">Sign Up</button>
 
-                <div class="popup" id="popup">
-                    <h2>Congratulations!</h2>
-                    <p>You have successfully logged in</p>
-                    <p><a href="forum3" href="forum3.html">Click here to start</a></p>
-                    <button type="button" onclick="closePopup()">OK</button>
-                </div>
-            </form>
+                    <div class="popup" id="popup">
+                        <h2>Congratulations!</h2>
+                        <p>You have successfully logged in</p>
+                        <p><a href="../html/forum3.html">Click here to start</a></p>
+                        <button type="button" onclick="closePopup()">OK</button>
+                    </div>
+                </form>
 
-            <p class="login">Already have an account? <a href="forum1_revisi.html">Log In</a></p>
+                <p class="login">Already have an account? <a href="forum1_revisi.html">Log In</a></p>
 
-            <script>
-                const popup = document.getElementById("popup");
+                <script>
+                    const popup = document.getElementById("popup");
 
-                function openPopup() {
-                    const email = document.getElementById("email-input").value.trim();
-                    const password = document.getElementById("password-input").value.trim();
+                    function openPopup() {
+                        const email = document.getElementById("email-input").value.trim();
+                        const password = document.getElementById("password-input").value.trim();
 
-                    if (!email || !password) {
-                        alert("Fill out all fields before submitting.");
-                    } else if (password.length < 8) {
-                        alert("At least 8 characters long.");
-                    } else {
-                        popup.classList.add("open-popup");
+                        if (!email || !password) {
+                            alert("Fill out all fields before submitting.");
+                        } else if (password.length < 8) {
+                            alert("At least 8 characters long.");
+                        } else {
+                            popup.classList.add("open-popup");
+                            document.getElementById("form").reset();
+                        }
+                    }
+
+                    function closePopup() {
+                        popup.classList.remove("open-popup");
                         document.getElementById("form").reset();
                     }
-                }
+                </script>
 
-                function closePopup() {
-                    popup.classList.remove("open-popup");
-                    document.getElementById("form").reset();
-                }
-            </script>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <p>&copy; Copyright 2024 </p>
+        <p>This website was created by <a href="authors.html">Authors</a></p>
+        <p><a href="https://www.instagram.com/wave_to_earth/profilecard/?igsh=MXJ1N3Z3MWhzZzUwdg==">Instagram</a>
+            | <a href="https://youtube.com/@wavetoearth?si=JQhUo71J6aTkDCLk">Youtube</a> | <a
+                href="https://vm.tiktok.com/ZSjUesE9N/">Tiktok</a> | <a href="https://wavetoearthmerchs.com/">Official
+                Merchandise</a></p>
+    </footer>
 </body>
 
 </html>
