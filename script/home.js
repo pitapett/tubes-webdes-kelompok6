@@ -1,5 +1,5 @@
 
-
+// jquery untuk animasi bagian members
 $(function () {
     $('#john-cha').hover(function () {
         $('#john-cha').css('width', '50%');
